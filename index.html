@@ -1,58 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--- All images and video are the property of JAR Media, Jan Bella and Rihard Larson. Background image used with permission and can be viewed here: https://unsplash.com/@at8eqeq3-->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css\main.css">
     <link href='https://fonts.googleapis.com/css?family=Calistoga' rel='stylesheet'>
-    <title>Bee The Hero Home</title>
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Bee The Hero</title>
 </head>
 
 <body>
-    <div id="nav-bar">
-        <nav>
-            <h1 class="logo">Bee The Hero</h1>
-            <h6 class="logo-sub">A film by JAR Media</h6>
-            <ul class="nav-list">
-                <li class="nav-link"><a href="index.html">Home</a></li>
-                <li class="nav-link"><a href="gallery.html">Gallery</a></li>
-                <li class="nav-link"><a href="about.html">About</a></li>
+    <header id="header">
+        <nav id="nav-bar">
+            <!-- <img id="header-img" src="#"> -->
+            <h1 class="header-text">Bee The Hero</h1>
+            <h6 class="header-text">A JAR Media production</h6>
+            <ul id="nav-links">
+                <li><a class="nav-link" href="#nav-bar">Home</a></li>
+                <li><a class="nav-link" href="#film-info">Info</a></li>
+                <li><a class="nav-link" href="#form-container">Contact</a></li>
             </ul>
-            <!-- <p><q id="quote">A fascinating window into the life of the bee</q></p> -->
+
         </nav>
+    </header>
+
+    <div class="video">
+        <video id="video" width=90% controls>
+            <source src="media/bth.mp4" type="video/mp4">Your browser does not support video
+        </video>
     </div>
 
-    <div class="content">
-        <div id="movie">
-            <iframe id="video" width="840" height="630" src="https://www.youtube.com/embed//2ReiCK4kedE" frameborder="0"
-                alt="Bee The Hero embedded youtube video">
-            </iframe>
-        </div>
-        <div id="movie-credits">
-            <div class="movie-credits">
-                <h6>Direction & Filming:</h6>
-                <p>Jan Bella</p>
-            </div>
-            <div class="movie-credits">
-                <h6>Storyboard & Assistant:</h6>
-                <p>Richard Larson</p>
-            </div>
-            <div class="movie-credits">
-                <h6>In cooperation with:</h6>
-                <p>MDBKA</p>
-                <p>
-                    The Green Bee</p>
-            </div>
+    <div id="credits">
+        <div class="credits">
+            <h3>A Film By</h3>
+            <p>JAR Media</p>
         </div>
 
+        <div class="credits">
+            <h3>In Collaboration With</h3>
+            <p>Manchester District Beekeeping Authority</p>
+        </div>
+
+        <div class="credits">
+            <h3>Narrated By</h3>
+            <p>John Eaden</p>
+        </div>
+        <!-- </div>   -->
     </div>
-    <div class="footer">
-        <footer>
-            <p>All video and images are the property of their respective owners and may not be used without permission.</p>
-        </footer>
+
+
+    <div id="container">
+        <div id="film-info">
+            <h2>Directors Notes</h2>
+            <p class="info">John Eaden has been keeping bees for over 9 years. In this short film, John (with help from his assistant Rachel) talks to us about just how remarkable our tiny, buzzing, neighbours actually are, the critical role they play in the natural world and what the public can do to support them.</p>
+
+            <p class="info">JAR Media and the Manchester & District Beekeeping Association are proud to bring you this short educational video on Manchester's very own mascot.</p>
+        </div>
+        <div id="gallery-container">
+            <h2>Production Stills</h2>
+            <div id="gallery">
+                <div class="gallery-img"><img src="images/bth (2).jpg" alt=""></div>
+                <div class="gallery-img"><img src="images/bth (3).jpg" alt=""></div>
+                <div class="gallery-img"><img src="images/bth (4).jpg" alt=""></div>
+                <div class="gallery-img"><img src="images/bth (5).jpg" alt=""></div>
+                <div class="gallery-img"><img src="images/bth (6).jpg" alt=""></div>
+                <div class="gallery-img"><img src="images/bth (7).jpg" alt=""></div>
+            </div>
+        </div>
     </div>
+
+
+
+<div id="form-container">
+    
+    <div id="form-table">
+        <h2>Contact Us</h2>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <h3>Enter your name here</h3>
+            <input id="name" class="form-element" type="text" placeholder=" Name" required>
+            <h3>Enter your email here</h3>
+            <input id="email" name ="email" class="form-element" type="email" placeholder=" Email" required>
+            <h3>Enter your message here</h3>
+            <input id="message" class="form-element" type="text-box" placeholder=" Message" required>
+            <!-- <h3>Press me to submit</h3> -->
+            <button id="submit" class="form-element" type="submit" value="submit">Submit</button>
+        </form>
+    </div>
+    <div id="social"><h2>Social Media</h2>
+        <!-- Add font awesome icons -->
+        <div class="social-icons">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter">
+            <a href="#" class="fa fa-instagram"></a>
+        </a></div>
+    </div>
+</div>
+
+<footer><a class="footer-link" href="#">Terms</a>
+   <a class="footer-link" href="#">Privacy</a>
+</footer>
 </body>
 
 </html>
