@@ -1,34 +1,59 @@
-/*** FCC - Responsive Web Dev - Project #3: Product Landing Page CSS ***/
+/*** Generic styles ***/
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     text-decoration: none;
+    
 }
-
-
-/*** Media Query ***/
-
-@media (min-height: 350px) { /* CSS Rules */ }
-
 
 body {
-    max-width: 100%;
     font-family: Arial, Helvetica, sans-serif;
-    /* background-color: rgb(255, 162, 75); */
+    max-width: 100%;
+    background-image: url('../images/bee.jpg') ;
+    background-repeat: no-repeat;
+    background-color: hsl(44, 85%, 50%);
+
+    /*** background parallax effect ***/
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-h1{
-    font-family: Calistoga, arial;
-    font-size: 3em;
-}
-
-h1, h6{
+h1,h2,h6 {
+    font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
 
-h3{
-    color:#ffffff;
+h6 {
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-size: .8em;
+    font-weight: 500;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+}
+
+q {
+    font-size: .8em;
+}
+
+img {
+    width:350px;
+    height: 350px;
+    object-fit: cover;
+    transition:all 2s;
+}
+
+footer{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1em 0em 1em 0em;
+    background-color: rgba(255, 255, 255, 0.205);
 }
 
 
@@ -38,21 +63,21 @@ a:link {
     color: white;
     padding: .5em;
     border-radius: 5%;
-}
+    }
 
   /* visited link */
 a:visited {
     color: hsl(0, 0%, 100%);
     padding: .5em;
     border-radius: 5%;
-}
+    }
 
   /* mouse over link */
 a:hover {
         background-color: hsl(44, 73%, 72%);
         padding: .5em;
         border-radius: 5%;
-}
+    }
 
   /* selected link */
 a:active {
@@ -62,185 +87,186 @@ a:active {
 }
 
 
-/*** Nav Bar ***/
-/* Note: The FCC brief insists this be a fixed nav bar however, in this draft, I've changed it to be entirely styled by flex */
+/*** Navigation Bar ***/
 
-#nav-bar{
-
-    
-    display: flex;
+nav{
+    max-width: 100%;
+    display:flex;
+    min-height: 15vh;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(255, 209, 60);
-    background-image: url('/images/bee.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* padding-bottom: 5em; */
-} 
-
-#nav-links{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    padding: 1em;
-    list-style-type: none;
+    margin: 2em 0em 0em 0em;
 }
+
+.logo, .logo-sub {
+    display:flex;
+    justify-content: center;
+    padding-bottom: .3em;;
+    font-family: Calistoga;
+}
+
+.logo{
+    font-size: 3em;
+}
+
+.logo-sub{
+    font-size: 1em;
+}
+
+.nav-list{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    margin:0em; 
+} 
 
 .nav-link{
+    text-decoration: none;
+    padding:1.3em;
+}
+
+#quote{
+    color: white;
+    display:flex;
+    justify-content: center;
+}
+
+
+/*** Movie ***/
+
+#movie-credits{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 3em;
+}
+
+.movie-credits{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.movie-credits>h6{
+    padding-bottom: .7em;
+}
+
+.movie-credits>p{
+    font-size: 10px;
+    font-weight:500;
+    padding: .4em;
+}
+
+#movie{
+    display: flex;
+    justify-content: center;
+}
+
+#video{
+    border: solid 5px hsla(0, 0%, 100%, .4);
+}
+/*** Image Gallery ***/
+
+#promo-gallery{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 3em;
+    /* background-color: white; */
+}
+
+#promo-gallery>h1{
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+}
+
+#promo-images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.promo-img{
+    max-width: 100%;
+    margin: 1em;
+    padding:.5em;
+    background-color: hsla(0, 0%, 100%, .4);;
+    }
+
+.promo-img>img:hover{
+    width:370px;
+    height: 370px;
+}
+
+
+/*** About Us/Contributor Content ***/
+
+#about-film{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#about-film-text{
+    width: 50em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0em 1em 1em 1em;
+    text-align: center;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+#about-film-text>h1{
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
     padding: 1em;
 }
 
-#header-img{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-
-/*** Video and Credits ***/
-
-.video{
-    display: flex;
-    justify-content: center;
-    padding: 2em
-}
-
-#credits{
-    display: flex;
-    justify-content: center;
-}
-
-.credits{
-    width: 30%;
+#contributors{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    text-align:center;
-    padding: 1em 1em 3em 1em;
-    border-bottom: 1px solid rgb(200, 200, 200);
-}
-
-.credits>h3{
-    color: rgb(66, 66, 66);
-    padding: .3em;
-    font-size: 1.1em;
     }
 
-
-/***  Gallery ***/
-
-#container{
+.contributor{
     display: flex;
-    justify-content: space-around;
-    padding: 3em 5em 3em 5em;
-    border-bottom: 1px solid rgb(200, 200, 200);
-}
-
-#film-info{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-right: 3em; 
-} 
-
-.info{
-    padding: 1em 3em 0 0;
-}
-
-#gallery-container{
-    width: 100%;
-}
-
-#gallery{
-    display: flex;
+    flex-direction: row;
+    justify-content: center; /* consider center */
     flex-wrap: wrap;
-    padding-top: 1em;
+    padding: 1em 0em 1em 0em;
 }
 
-.gallery-img{
-    padding: .1em .2em .1em .2em ;
-}
-
-.gallery-img>img {
-    width:100px;
-    height: 100px;
+.contributor-img{
+    width: 150px;
+    height: 150px;
     object-fit: cover;
-    transition:all 2s;
-}
-
-.gallery-img>img:hover {
-    padding: .3em;
-    background-color: rgb(214, 214, 214);
-}
-
-
-/*** Form ***/
-
-#form-container{
-    display: flex;
-    padding: 3em 5em 3em 5em;
-    /* border-bottom: 1px solid rgb(200, 200, 200); */
-    background-color: hsl(49, 87%, 51%);
-    color: white;
-}
-
-#form-table{
-    width:70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-right: 3em;
-}
-
-#form-table>h2{
-    padding-bottom: 2em;
-}
-
-.form-element{
-    height:3em;
-    width: 80%;
-    margin-bottom:  2em;
-    border: 4px solid rgb(255, 255, 255);
-    background-color: hsla(0, 0%, 100%, 0.2);
-}
-
-#social{
-    width: 37%;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-}
-
-.social-icons{
-    padding-top: 1em;
-}
-
-.fa {
-    text-align: center;
-    text-decoration: none;
+    border: 5px solid;
+    border-color: white;
     border-radius: 50%;
 }
 
-#submit{
-    color: hsl(49, 87%, 51%);
-    background-color: hsla(0, 0%, 100%);
-}
-
-
-/*** Footer ***/
-
-footer{
+.contributor-info{
+    width: 350px;
     display: flex;
-    flex-direction: row;
-    background-color:hsl(49, 87%, 51%)
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    text-align: center;
 }
 
-.footer-link:link, .footer-link:visited, .footer-link:hover, .footer-link:active{
-    color: black;
-    font-size: small;
-    padding: 2em 2em 2em 6em;
-    background-color: hsl(49, 87%, 51%);
+.contributor-info>h1{
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    padding: 1em;
 }
 
+.contributor-info>h2{
+    font-size: 1em;
+    padding: .5em;
+}
